@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Yatzy</title>
+	<link rel="stylesheet" href="css/main.css"/>
+	<link rel="stylesheet" href="css/mobile.css" media="only screen and (max-device-width:1021px)"/>
+</head>
+<body>
+	<div id="box">
+		<div id="header">
+			<h3>YATZY</h3>
+		</div>
+		<div id="content">
+			<div id="dicePanel">
+				<h2 id="playerName"><h2>
+				<ul id="imgList">
+					<li><img src="resources/d1.png"><input type="checkbox"></input></li>
+					<li><img src="resources/d2.png"><input type="checkbox"></input></li>
+					<li><img src="resources/d3.png"><input type="checkbox"></input></li>
+					<li><img src="resources/d4.png"><input type="checkbox"></input></li>
+					<li><img src="resources/d5.png"><input type="checkbox"></input></li>
+				</ul>
+				<input id="rollBtn" type="button" value="Roll"></input>
+				<h2 id ="roundText"></h2>
+			</div>
+			<form id="playerForm">
+				<select id="numOfPlayersList">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+				</select>
+				<input id="playBtn" type="button" value="Play"></input>
+				<ul id="playerNameList">
+					<li class="textFieldsListItems">Player 1<input type="text" name="p1"></input></li>
+				</ul>
+			</form>
+			<div id="infoPanel">
+				<div id="scoreTable">
+					<table>
+						<tbody>
+							<tr class="noClickRow"><td><strong>COMBINATIONS</strong></td></tr>
+							<tr id="acesRow" class="upperSection"><td>Aces</td></tr>
+							<tr id="twosRow" class="upperSection"><td>Twos</td></tr>
+							<tr id="threesRow" class="upperSection"><td>Threes</td></tr>
+							<tr id="foursRow" class="upperSection"><td>Fours</td></tr>
+							<tr id="fivesRow" class="upperSection"><td>Fives</td></tr>
+							<tr id="sixesRow" class="upperSection"><td>Sixes</td></tr>
+							<tr id="subTotalRow" class="noClickRow totalScore"><td><strong>SUBTOTAL</strong></td></tr>
+							<tr id="bonusRow" class="noClickRow totalScore"><td><strong>BONUS</strong></td></tr>
+							<tr id="onePairRow" class="totalScore"><td>One pair</td></tr>
+							<tr id="twoPairsRow" class="totalScore"><td>Two pairs</td></tr>
+							<tr id="threeOfAKindRow" class="totalScore"><td>Three of a kind</td></tr>
+							<tr id="fourOfAKindRow" class="totalScore"><td>Four of a kind</td></tr>
+							<tr id="smallStraightRow" class="totalScore"><td>Small straight</td></tr>
+							<tr id="bigStraightRow" class="totalScore"><td>Big straight</td></tr>
+							<tr id="fullHouseRow" class="totalScore"><td>Full house</td></tr>
+							<tr id="chanceRow" class="totalScore"><td>Chance</td></tr>
+							<tr id="yatzyRow" class="totalScore"><td>Yatzy</td></tr>
+							<tr id="totalRow" class="noClickRow"><td><strong>TOTAL</strong></td></tr>
+						</tbody>
+					</table>
+				</div>
+				<div id="rulesTable">
+					<h2>Rules</h2>
+					<p><strong>Object of the game</strong> </br>
+
+						The object of Yatzy is to obtain the highest score from throwing 5 dices. The game consists of 15 rounds. In each round, you roll the dice and then score the roll in one of 15 categories. You must score once in each category. The score is determined by a different rule for each category.
+						The game ends once all 15 categories have been played through.
+					</p>
+					<p>
+						<strong>Game Start</strong></br>
+
+						To start with, you need to roll all of the dices. After rolling you can either score the current roll (see below), or re-roll any or all of the dices. This is done by clicking on the dices(the ones clicked are the ones to be saved). You may only roll the dices a total of 3 times (no matter how many of them you choose to roll). After rolling 3 times you must choose a category to score. You may score the dices at any point in the round, i.e. it doesn't have to be after the 3rd roll.
+					</p>
+					<p>
+						<strong>Scoring</strong></br>
+
+						To score your combination of 5 dices, you click one of the 15 boxes. There are two sections to the score table - the Upper Section and the Lower Section. Once a box has been scored, it cannot be scored again for the rest of the game, so choose wisely. In case none of your dices matches an available category, you must pick one to mark out, meaning it can't no longer be scored.
+					</p>
+					<p>
+						<strong>Upper Section Scoring</strong></br>
+
+						If you score in the upper section of the table, your score is the total of the specified die faces. So if you roll: [5-2-5-6-5] and score in the Fives category, your total for the category would be 15, because there are three fives, which are added together. If the One, Three or Four Categories were selected for scoring with this roll, you would score a zero. If placed in the Two or Six category, you would score 2 and 6 respectively. <strong>Bonus</strong>: If the total score in the upper section amounts to 63 or more, a bonus of 50 is added in the Bonus field. Note that 63 is the total of three each of 1s, 2s, 3s, 4s, 5s and 6s.
+					</p>
+					<p>
+						<strong>Lower Section Scoring</strong></br>
+
+						In the lower scores, you score either a set amount, or zero if you don't satisfy the category requirements. For 3 of a kind you must have at least 3 of the same die faces. You score the total of all the dices. For 4 of a kind you would need 4 of the same die. A Straight is a sequence of consecutive die faces. Small straights [1-2-3-4-5] score 15 and a large [2-3-4-5-6] 20 points. A Full House is where you have 3 of a kind and a pair not found in the 3 of a kind. Full houses score the value of the dices. i.e.: [3-3-2-3-2] would score 13 in the Full House category. A Yatzy is 5 of a kind and scores 50 points, although you may elect NOT to score it as a Yatzy, instead choosing to take it as a top row score and safeguard your bonus.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="menuBar">
+			<div class="menuButtons" id="newGameBtn">New Game</div>
+			<div class="menuButtons" id="scoreBoardBtn">Scoreboard</div>
+			<div class="menuButtons" id="rulesBtn">Rules</div>
+			<div class="menuButtons" id="highscoresBtn">Highscores</div>
+		</div>
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="js/yatzy.js"></script>
+		<script src="js/yatzy.dice.js"></script>
+		<script src="js/yatzy.ui.js"></script>
+		<script src="js/yatzy.logic.js"></script>
+	</div>
+</body>
+</html>
